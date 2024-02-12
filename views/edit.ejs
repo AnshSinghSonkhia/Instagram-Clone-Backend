@@ -19,7 +19,10 @@
     <div class="gap-5 px-4 mt-10">
       <h3 class="text-lg leading-none">Edit Account Details</h3>
       <hr class="opacity-30 my-3">
-      <form class="w-full" action="/update" method="post">
+      <form class="w-full" action="/update" method="post" enctype="multipart/form-data">
+
+        <input id="imageinput" hidden type="file" name="image">
+
         <input class="px-3 mt-2 py-2 border-2 border-zinc-800 rounded-md block w-full bg-zinc-900" type="text" placeholder="username" name="username" value="<%= user.username %>">
         <input class="px-3 mt-2 py-2 border-2 border-zinc-800 rounded-md block w-full bg-zinc-900" type="text" placeholder="name" name="name" value="<%= user.name %>">
         <textarea class="px-3 mt-2 py-2 border-2 border-zinc-800 rounded-md block w-full bg-zinc-900 resize-none" placeholder="Bio" name="bio"><%= user.bio %></textarea>

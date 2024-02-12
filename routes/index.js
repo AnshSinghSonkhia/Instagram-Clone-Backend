@@ -112,6 +112,22 @@ router.get("/search", isLoggedIn, async function (req, res) {
   res.render("search", { footer: true, user });
 });
 
+router.get("/like/post:id", isLoggedIn, async function (req, res) {
+  const user = await userModel.findOne({username: req.session.passport.user}); 
+  const post = await postModel.findOne({_id: req.params.id});
+
+  // if already liked, remove like
+  // if not liked, Like it
+  if (post.likes.indexOf(user._id) === -1){
+    post.likes.push(user._id);
+  } else{
+    post.likes.splice(post.likes.indexOf(user._id), 1);
+  }
+
+  await post.save();
+  res.redirect("/feed");
+});
+
 router.get("/save/:postid", isLoggedIn, async function (req, res) {
   let user = await userModel.findOne({ username: req.session.passport.user });
 
