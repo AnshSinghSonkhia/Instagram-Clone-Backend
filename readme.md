@@ -9,12 +9,16 @@
   <code><img height="30" src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white"></code>
   <code><img height="30" src="https://img.shields.io/badge/Passportjs-000000?style=for-the-badge&logo=Passportjs&logoColor=white"></code>
   <code><img height="30" src="https://img.shields.io/badge/ejs-a6004f?style=for-the-badge&logo=EJS&logoColor=white"></code>
+  <code><img height="30" src="https://img.shields.io/badge/Multer-252525?style=for-the-badge&logo=Multer&logoColor=white"></code>
 <br>
 
 ### PassportJS - passportjs.org
 
 - Simple, unobtrusive authentication for Node.js
 -  Passport is authentication middleware for Node.js. Extremely flexible and modular, Passport can be unobtrusively dropped in to any Express-based web application. A comprehensive set of strategies support authentication using a username and password, Facebook, Twitter, and more
+
+### Multer
+used to upload the images. Users will be able to upload images.
 
 
 
